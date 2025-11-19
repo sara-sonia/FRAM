@@ -13,28 +13,54 @@ body {
 /* --- Navigation --- */
 .navbar {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  align-items: center; /* vertically center everything */
   padding: 1rem 2rem;
   background-color: #F7F2DE;
   position: sticky;
   top: 0;
 }
 
+/* Menu button (hamburger) */
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 662px; /* space between menu and logo */
+}
+
+/* Logo */
 .logo {
   font-family: 'Frank Ruhl Libre', serif;
   font-weight: 300;
   font-size: 32px;
   letter-spacing: 2px;
+  margin-right: 636px; /* space between logo and cart button */
 }
 
-.menu-btn,
+/* Cart button */
 .cart-btn {
-  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 47px;
+  height: 36px;
+  padding: 10px;
+  gap: 10px;
+  border-radius: 50px;
+  background-color: #28BD6D;
   border: none;
-  font-size: 1.5rem;
   cursor: pointer;
 }
+
+.cart-btn .cart-count {
+  font-family: 'Arimo', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #1B1A1E;
+}
+
 
 /* --- Hero section --- */
 .hero {
@@ -372,7 +398,7 @@ padding-bottom: 89px;
   color: #ffffff;
 }
 
-/* Inner wrapper (for spacing control) */
+/* Inner wrapper */
 .footer-inner {
   position: relative;
   width: 100%;
@@ -403,7 +429,7 @@ padding-bottom: 89px;
   font-weight: 400;
   font-size: 36px;
   padding-left: 57px;
-  margin-top: 63px; /* visually matches your spacing */
+  margin-top: 63px; 
   margin-bottom: 0;
 }
 
@@ -424,13 +450,13 @@ padding-bottom: 89px;
   margin-left: 57px;
   margin-top: 36px;
   width: 460px;
-  gap: 32px; /* space between inputs */
+  gap: 32px; 
 }
 
 /* Input fields */
 .input-field {
   width: 460px;
-  height: 52px; /* derived from your "104px height / 2 fields" spec */
+  height: 52px; 
   border-radius: 6px;
   border: none;
   padding: 0 12px;
@@ -454,7 +480,7 @@ padding-bottom: 89px;
   font-weight: 400;
 }
 
-/* Send button hover (optional, can be removed) */
+/* Send button hover */
 .send-btn:hover {
   opacity: 0.9;
 }
