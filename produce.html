@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sustainable Food Delivery Webshop</title>
+  <link rel="stylesheet" href="styles.css">
+ <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+ <nav class="navbar">
+    <button class="menu-btn" aria-label="Open menu">☰</button>
+    <h1 class="logo">FRAM</h1>
+     <button class="cart-btn" aria-label="Shopping Cart">
+  <span class="cart-count">0</span>
+</button>
+    <div class="status-dot" aria-hidden="true"></div>
+  </nav>
+</header>
+
+<!-- PopOver Menu -->
+<div class="popover-menu" id="popoverMenu">
+  <div class="menu-header">
+    <button class="menu-close" aria-label="Close menu">
+      <i class="fas fa-xmark"></i>
+    </button>
+  </div>
+
+  <nav class="menu-items">
+    <a href="#" class="menu-link">PRODUCTS</a>
+    <a href="#" class="menu-link">CHAT</a>
+    <a href="#" class="menu-link">CHECKOUT</a>
+  </nav>
+</div>
+
+
+
+
+<footer class="site-footer" role="contentinfo" aria-labelledby="footer-heading">
+  <div class="footer-inner">
+
+    <!-- Visible Footer Brand -->
+    <h2 id="footer-heading" class="footer-brand">FRAM</h2>
+
+    <div class="footer-divider"></div>
+
+    <!-- Stay Updated Section -->
+    <h3 class="footer-subtitle">STAY UPDATED</h3>
+
+    <p class="footer-description">
+      Sign up for our newsletter to be the first <br>
+      to know about new produce or other <br>
+      exciting news!
+    </p>
+
+    <!-- Accessible Newsletter Form -->
+    <form class="newsletter-form" aria-labelledby="newsletter-heading">
+      
+      <!-- Hidden but accessible label -->
+      <h4 id="newsletter-heading" class="sr-only">Newsletter Signup Form</h4>
+
+      <label for="first-name" class="sr-only">First name</label>
+      <input 
+        type="text"
+        id="first-name"
+        name="first_name"
+        placeholder="First name"
+        autocomplete="given-name"
+        class="input-field"
+        aria-required="true"
+      >
+
+      <label for="email" class="sr-only">Email address</label>
+      <input 
+        type="email"
+        id="email"
+        name="email"
+        placeholder="E-mail adress"
+        autocomplete="email"
+        class="input-field"
+        aria-required="true"
+      >
+
+      <button
+        type="submit"
+        class="send-btn"
+        aria-label="Send newsletter signup form"
+      >
+        Send
+      </button>
+
+    </form>
+
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
