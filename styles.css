@@ -18,6 +18,7 @@ body {
   background-color: #F7F2DE;
   position: sticky;
   top: 0;
+  border-bottom: 1px solid #000;
 }
 
 /* Menu button (hamburger) */
@@ -468,6 +469,158 @@ padding-bottom: 89px;
 .spacer {
 padding-bottom: 89px;
 }
+
+
+/*PRODUCE PAGE*/
+.produce-page {
+  width: 1516px;
+  margin: 0 auto;
+  background-color: #F7F2DE;
+}
+
+/* PRODUCE TITLE */
+.produce-title {
+  font-family: 'Arimo', sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  color: #1B1A1E;
+  margin-top: 90px;
+  margin-left: 43px;
+}
+
+/* PRODUCE DESCRIPTION */
+.produce-description {
+  font-family: 'Arimo', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #1B1A1E;
+  width: 1100px;
+  margin-top: 30px;
+  margin-left: 43px;
+  line-height: 1.4;
+}
+
+/* ROWS */
+.produce-row {
+  display: flex;
+  gap: 29px;             
+  margin-left: 43px;     
+  justify-content: flex-start;  
+  padding-right: 0;      
+  max-width: calc(454px * 3 + 29px * 2); 
+}
+
+.row-top {
+  margin-top: 52px;
+}
+
+.row-bottom {
+  margin-top: 57px;
+  padding-right: 531px;
+}
+
+.produce-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* IMAGES */
+.card-image-wrapper {
+  width: 454px;
+  height: 432px;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ADD BUTTON */
+.add-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 152px;
+  height: 38px;
+  background-color: #0B0A08;
+  border-radius: 44px;
+  border: none;
+  color: white;
+  font-family: 'Arimo', sans-serif;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+/* CARD TEXT */
+.card-text {
+  margin-left: 0px;
+  margin-top: 17px;
+}
+
+.card-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  font-family: 'Arimo', sans-serif;
+  font-weight: 400;
+  color: #1B1A1E;
+  padding: 0 16px; /* optional: small padding inside card */
+}
+
+.product-weight {
+    margin-top: 12px;
+  font-size: 20px;
+  color: rgba(27, 26, 30, 0.8);
+  font-family: 'Arimo', sans-serif;
+  padding-left: 16px; /* aligns under product name */
+}
+
+/* MAP SECTION */
+.farms-section {
+  width: 1516px;
+  margin: 0 auto;
+  border-top: 1px solid black;
+  margin-top: 120px;
+}
+
+.farms-inner {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.farms-title {
+  text-align: center;
+  font-family: 'Arimo', sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  color: #1B1A1E;
+  padding-top: 297.5px;
+  padding-bottom: 297.5px;
+  padding-left: 45px;
+  width: 507px; /* left text panel width based on 1516 - 1009 */
+}
+
+.map-wrapper {
+  width: 1009px;
+  border-left: 1px solid black;
+  padding: 90px 132px;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
 
 /* Main footer container */
 .site-footer {
