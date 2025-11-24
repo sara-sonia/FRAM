@@ -43,6 +43,12 @@ body {
   margin-right: 636px; 
 }
 
+.logo a {
+  text-decoration: none; 
+  color: inherit;        
+  display: inline-block; 
+}
+
 /* Cart button */
 .cart-btn {
   display: flex;
