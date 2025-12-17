@@ -57,13 +57,13 @@ Before running the project, make sure you have:
 
 ## Environment Variables 
 
-This project requires API keys for the OpenAI chatbot and Google Maps functionality.
+This project requires an API key for the OpenAI chatbot functionality.
 
 1. Create a .env file in the root of your project directory.
 
 2. Add the following environment variables:
 OPENAI_API_KEY=your_openai_api_key_here
-GOOGLE_MAPS_API_KEY=your_google_maps_api_key_here
+
 
 Note: The .env file is not included in the repository for security reasons. Ensure your keys are kept private.
 
