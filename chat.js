@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="chat-inner">
         <button class="close-chat" aria-label="Close chat">✕</button>
         <div class="conversation" id="conversation">
-          <div id="messages">
+          <div id="messages" aria-live="polite">
             <div class="system-row">
               <div class="fram-label">FRAM</div>
               <div class="system-bubble">What can I help you with today?</div>
@@ -41,20 +41,58 @@ document.addEventListener("DOMContentLoaded", () => {
   const disconnectedEl = chatContainer.querySelector("#disconnected");
   const conversationEl = chatContainer.querySelector(".conversation");
   const closeBtn = chatContainer.querySelector(".close-chat");
+  const chatTriggerLinks = document.querySelectorAll(".chat-link");
 
   let isLoading = false;
 
-  closeBtn.addEventListener("click", () => {
-    chatFrame.style.display = "none";
+  // -----------------------------
+  // Accessibility: Trigger links
+  // -----------------------------
+  chatTriggerLinks.forEach(link => {
+    if (!link.hasAttribute("tabindex")) link.setAttribute("tabindex", "0");
+
+    link.addEventListener("keydown", e => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        openChat();
+      }
+    });
   });
 
-  document.addEventListener("click", (e) => {
-    if (e.target.closest(".chat-link")) {
-      e.preventDefault();
-      chatFrame.style.display = "block";
+  function openChat() {
+    chatFrame.style.display = "block";
+    inputEl.focus();
+  }
+
+  // Close chat via close button
+  closeBtn.addEventListener("click", () => {
+    closeChat();
+  });
+
+  // Close chat via Escape key
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape" && chatFrame.style.display === "block") {
+      closeChat();
     }
   });
 
+  function closeChat() {
+    chatFrame.style.display = "none";
+    // Return focus to first chat trigger link
+    chatTriggerLinks[0]?.focus();
+  }
+
+  // Open chat via click
+  document.addEventListener("click", (e) => {
+    if (e.target.closest(".chat-link")) {
+      e.preventDefault();
+      openChat();
+    }
+  });
+
+  // -----------------------------
+  // Message handling
+  // -----------------------------
   function scrollToBottom() {
     conversationEl.scrollTop = conversationEl.scrollHeight;
   }
@@ -103,6 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("loaderBubble")?.remove();
       inputEl.disabled = false;
       sendBtn.disabled = false;
+      inputEl.focus();
     }
   }
 
@@ -136,6 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   sendBtn.addEventListener("click", sendMessage);
+
   inputEl.addEventListener("keydown", e => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
