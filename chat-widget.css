@@ -1,0 +1,196 @@
+/* ---------- Container / frame ---------- */
+.chat-frame {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 508px;
+  max-width: 90vw;       
+  height: 716px;
+  max-height: 90vh;      
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  display: none;
+  z-index: 99999;
+  font-family: "Elza", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* ---------- Chat inner area ---------- */
+.chat-inner {
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative; 
+}
+
+/* ---------- Close button ---------- */
+.chat-frame .close-chat {
+  position: absolute;      
+  top: 16px;
+  right: 16px;
+  z-index: 1000;           
+  background: #DC4131;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-frame .close-chat:hover {
+  background: #a82b20;
+}
+
+/* ---------- Conversation area ---------- */
+.conversation {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+/* ---------- Messages ---------- */
+.system-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-left: 16px;
+  margin-bottom: 9px;
+}
+
+.fram-label {
+  font-family: "Frank Ruhl Libre", serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #0B0A08;
+}
+
+/* ---------- System / bot bubble ---------- */
+.system-bubble {
+  max-width: 70%;           
+  min-width: 60px;          
+  height: auto;             
+  border-radius: 16px;
+  background: #F7F2DE;
+  display: inline-flex;     
+  align-items: flex-start;  
+  padding: 10px 12px;       
+  font-family: "Elza", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #0B0A08;
+  word-wrap: break-word;    
+  white-space: pre-wrap;    
+  margin-bottom: 12px;      
+}
+
+/* ---------- Customer / user bubble ---------- */
+.customer-bubble {
+  align-self: flex-end;
+  max-width: 70%;           
+  width: fit-content;
+  height: auto;
+  background: #E1EAF0;
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-family: "Elza", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  display: inline-flex;
+  align-items: flex-start;
+}
+#messages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow-y: auto;
+  padding-bottom: 12px;
+}
+
+.disconnected {
+  width: 100%;
+  padding: 8px;
+  margin: 12px 0 15px 0;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background: #FFFFFF;
+  border: 1px solid #DC4131;
+  color: #DC4131;
+  font-family: "Arimo", sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 16px 17px 16px;
+  box-sizing: border-box;
+}
+
+.input-field {
+  flex: 1;
+  min-width: 0;
+  height: 69px;
+  border-radius: 16px;
+  background: #E1EAF0;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  font-family: "Elza", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+.input-field[disabled] {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.send-btn {
+  width: 60px;
+  height: 44px;
+  border-radius: 16px;
+  background: #DC4131;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.send-btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.dots {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: 0px;
+  color: #0B0A08;
+  font-family: "Font Awesome 6 Pro", "Elza", sans-serif;
+}

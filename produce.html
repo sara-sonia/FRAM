@@ -5,23 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sustainable Food Delivery Webshop</title>
   <link rel="stylesheet" href="styles.css">
- <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700&display=swap" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <link rel="stylesheet" href="chat-widget.css">
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
 <header>
- <nav class="navbar">
+  <nav class="navbar">
     <button class="menu-btn" aria-label="Open menu">☰</button>
     <h1 class="logo">
       <a href="index.html">FRAM</a>
     </h1>
-     <button class="cart-btn" aria-label="Shopping Cart">
-  <span class="cart-count">0</span>
-</button>
+    <button class="cart-btn" aria-label="Shopping Cart">
+      <span class="cart-count">0</span>
+    </button>
     <div class="status-dot" aria-hidden="true"></div>
   </nav>
 </header>
@@ -33,22 +33,17 @@
       <i class="fas fa-xmark"></i>
     </button>
   </div>
-
   <nav class="menu-items">
     <a href="#" class="menu-link">PRODUCTS</a>
-    <a href="#" class="menu-link">CHAT</a>
+    <a href="#" class="menu-link chat-link">CHAT</a>
     <a href="#" class="menu-link">CHECKOUT</a>
   </nav>
 </div>
 
-
-
 <main class="produce-page" aria-labelledby="produce-heading">
 
   <!-- PRODUCE HEADING -->
-  <h3 id="produce-heading" class="produce-title">
-    PRODUCE
-  </h3>
+  <h3 id="produce-heading" class="produce-title">PRODUCE</h3>
 
   <!-- PRODUCE INTRO PARAGRAPH -->
   <p class="produce-description">
@@ -62,11 +57,10 @@
     <article class="produce-card">
       <div class="card-image-wrapper">
         <img src="images/oats.png" alt="Oats">
-        <button class="add-btn" aria-label="Add item to basket">
-          Add to basket <i class="fa-solid fa-arrow-up"></i>
+        <button class="add-btn" aria-label="Add Oats to basket">
+          Add to basket <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
         </button>
       </div>
-
       <div class="card-text">
         <div class="card-top-row">
           <span class="product-name">Oats</span>
@@ -79,11 +73,10 @@
     <article class="produce-card">
       <div class="card-image-wrapper">
         <img src="images/redonion.png" alt="Red Onions">
-        <button class="add-btn" aria-label="Add item to basket">
-          Add to basket <i class="fa-solid fa-arrow-up"></i>
+        <button class="add-btn" aria-label="Add Red Onions to basket">
+          Add to basket <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
         </button>
       </div>
-
       <div class="card-text">
         <div class="card-top-row">
           <span class="product-name">Red Onions</span>
@@ -96,11 +89,10 @@
     <article class="produce-card">
       <div class="card-image-wrapper">
         <img src="images/garlic.png" alt="Garlic">
-        <button class="add-btn" aria-label="Add item to basket">
-          Add to basket <i class="fa-solid fa-arrow-up"></i>
+        <button class="add-btn" aria-label="Add Garlic to basket">
+          Add to basket <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
         </button>
       </div>
-
       <div class="card-text">
         <div class="card-top-row">
           <span class="product-name">Garlic</span>
@@ -116,11 +108,10 @@
     <article class="produce-card">
       <div class="card-image-wrapper">
         <img src="images/potato.png" alt="Potato">
-        <button class="add-btn" aria-label="Add item to basket">
-          Add to basket <i class="fa-solid fa-arrow-up"></i>
+        <button class="add-btn" aria-label="Add Potato to basket">
+          Add to basket <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
         </button>
       </div>
-
       <div class="card-text">
         <div class="card-top-row">
           <span class="product-name">Potato</span>
@@ -133,11 +124,10 @@
     <article class="produce-card">
       <div class="card-image-wrapper">
         <img src="images/carrot.png" alt="Carrots">
-        <button class="add-btn" aria-label="Add item to basket">
-          Add to basket <i class="fa-solid fa-arrow-up"></i>
+        <button class="add-btn" aria-label="Add Carrots to basket">
+          Add to basket <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
         </button>
       </div>
-
       <div class="card-text">
         <div class="card-top-row">
           <span class="product-name">Carrots</span>
@@ -151,91 +141,76 @@
   <!-- PARTNERING FARMS MAP SECTION -->
   <section class="farms-section" aria-labelledby="farms-heading">
     <div class="farms-inner">
-
       <h3 id="farms-heading" class="farms-title">
         SEE OUR <br> PARTNERING FARMS
       </h3>
-
-      <!-- LEFT MAP PANEL -->
       <div class="map-wrapper">
-        <div id="googleMap" class="map" aria-label="Interactive map of partners"></div>
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22358.829829438768!2d10.621905377783024!3d60.3087625487006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4641a30c3be67c59%3A0x94dbad789ad47bba!2sBraastad%20Gaard!5e0!3m2!1sno!2sno!4v1765917909202!5m2!1sno!2sno" 
+          width="600" 
+          height="450" 
+          style="border:0; border-radius:16px; display:block;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
-
     </div>
   </section>
 </main>
 
-
-
-
-
-
-
-
-
-
-
 <footer class="site-footer" role="contentinfo" aria-labelledby="footer-heading">
   <div class="footer-inner">
-
-    <!-- Visible Footer Brand -->
     <h2 id="footer-heading" class="footer-brand">FRAM</h2>
-
     <div class="footer-divider"></div>
-
-    <!-- Stay Updated Section -->
     <h3 class="footer-subtitle">STAY UPDATED</h3>
-
     <p class="footer-description">
-      Sign up for our newsletter to be the first <br>
-      to know about new produce or other <br>
-      exciting news!
+      Sign up for our newsletter to be the first to know about new produce or other exciting news!
     </p>
 
     <!-- Accessible Newsletter Form -->
     <form class="newsletter-form" aria-labelledby="newsletter-heading">
-      
-      <!-- Hidden but accessible label -->
       <h4 id="newsletter-heading" class="sr-only">Newsletter Signup Form</h4>
 
       <label for="first-name" class="sr-only">First name</label>
       <input 
-        type="text"
-        id="first-name"
-        name="first_name"
-        placeholder="First name"
-        autocomplete="given-name"
-        class="input-field"
+        type="text" 
+        id="first-name" 
+        name="first_name" 
+        placeholder="First name" 
+        class="input-field" 
         aria-required="true"
       >
 
       <label for="email" class="sr-only">Email address</label>
       <input 
-        type="email"
-        id="email"
-        name="email"
-        placeholder="E-mail adress"
-        autocomplete="email"
-        class="input-field"
+        type="email" 
+        id="email" 
+        name="email" 
+        placeholder="E-mail address" 
+        class="input-field" 
         aria-required="true"
       >
 
-      <button
-        type="submit"
-        class="send-btn"
-        aria-label="Send newsletter signup form"
-      >
-        Send
-      </button>
-
+      <button type="submit" class="form-send-btn" aria-label="Send newsletter signup form">Send</button>
     </form>
-
   </div>
 </footer>
 
 <script src="script.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyZNvAlLN4Sa8lx1m0iLk9pkUePmeRfOg&callback=initMap" async defer></script>
+<script src="chat.js"></script>
 
-
+<!-- Custom quantity modal -->
+<div id="quantity-modal" class="modal">
+  <div class="modal-content">
+    <p style="color:#222;">How many units would you like to add?</p>
+    <input type="number" id="quantity-input" min="1" value="1">
+    <div class="modal-buttons">
+      <button id="modal-cancel">Cancel</button>
+      <button id="modal-confirm">Add to basket</button>
+    </div>
+  </div>
+</div>
+<script src="cart.js" defer></script>
 </body>
 </html>

@@ -1,8 +1,16 @@
+
+
+/* ======================
+   GLOBAL STYLES
+   ====================== */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+
 
 body {
   font-family: 'Inter', sans-serif;
@@ -10,7 +18,19 @@ body {
   color: #222;
 }
 
-/* --- Navigation --- */
+
+/* ======================
+   HEADER & NAVIGATION
+   ====================== */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #F7F2DE;
+}
+
+
 .navbar {
   display: flex;
   align-items: center; 
@@ -21,7 +41,7 @@ body {
   border-bottom: 1px solid #000;
 }
 
-/* Menu button (hamburger) */
+
 .menu-btn {
   background: none;
   border: none;
@@ -34,7 +54,7 @@ body {
   opacity: 0.4;
 }
 
-/* Logo */
+
 .logo {
   font-family: 'Frank Ruhl Libre', serif;
   font-weight: 300;
@@ -49,7 +69,6 @@ body {
   display: inline-block; 
 }
 
-/* Cart button */
 .cart-btn {
   display: flex;
   align-items: center;
@@ -73,21 +92,23 @@ body {
 }
 
 
-/* --- PopOver Menu --- */
-.navbar {
-  position: relative; 
-}
+
+/* ======================
+    POPOVER MENU
+   ====================== */
+
 
 .popover-menu {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 475px;
-  height: 919px;
+  width: 100%;
+  max-width: 475px;
+  height: auto;          
   background-color: #008F51;
   display: none;
   flex-direction: column;
-  z-index: 1000;
+  z-index: 2000;
 }
 
 .popover-menu.active {
@@ -140,14 +161,17 @@ body {
   text-decoration: underline;
 }
 
-/* Extra space below CHAT before CHECKOUT */
 .menu-link:last-child {
-  margin-top: 389px; 
+  margin-top: 200px; 
   margin-bottom: 151px; 
 }
 
 
-/* --- Hero section --- */
+/* ======================
+    HERO SECTION
+   ====================== */
+
+
 .hero {
   background-image: url('images/landscape.png'); 
   background-size: cover;
@@ -191,7 +215,12 @@ body {
   line-height: 1.2;
 }
 
-/* --- Info cards --- */
+
+/* ======================
+   INFO CARDS
+   ====================== */
+
+
 .info-section {
   display: flex;           
   justify-content: center; 
@@ -256,7 +285,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 320px;            
   height: 44px;            
   border-radius: 8px;
@@ -275,7 +303,12 @@ body {
   background-color: #AE2E21;
 }
 
-/* --- How it Works --- */
+
+/* ======================
+   HOW IT WORKS
+   ====================== */
+
+
 .how-it-works {
   display: flex;
   flex-wrap: wrap;
@@ -331,7 +364,6 @@ body {
   gap: 5rem;
 }
 
-/* header column */
 .how-step h3 {
   flex: 0 0 220px; 
   font-family: 'Arimo', sans-serif;
@@ -342,7 +374,6 @@ body {
   margin-top: 0.8rem; 
 }
 
-/* paragraph column */
 .how-step p {
   flex: 1;
   font-family: 'Arimo', sans-serif;
@@ -373,7 +404,11 @@ body {
 }
 
 
-/* --- Popular Produce Section --- */
+/* ======================
+   POPULAR PRODUCE
+   ====================== */
+
+
 .popular-produce {
   width: 1512px;
   margin: 0 auto;
@@ -477,14 +512,17 @@ padding-bottom: 89px;
 }
 
 
-/*PRODUCE PAGE*/
+/* ======================
+   PRODUCE PAGE
+   ====================== */
+
+
 .produce-page {
   width: 1516px;
   margin: 0 auto;
   background-color: #F7F2DE;
 }
 
-/* PRODUCE TITLE */
 .produce-title {
   font-family: 'Arimo', sans-serif;
   font-weight: 400;
@@ -494,7 +532,6 @@ padding-bottom: 89px;
   margin-left: 43px;
 }
 
-/* PRODUCE DESCRIPTION */
 .produce-description {
   font-family: 'Arimo', sans-serif;
   font-size: 20px;
@@ -506,7 +543,6 @@ padding-bottom: 89px;
   line-height: 1.4;
 }
 
-/* ROWS */
 .produce-row {
   display: flex;
   gap: 29px;             
@@ -530,7 +566,6 @@ padding-bottom: 89px;
   flex-direction: column;
 }
 
-/* IMAGES */
 .card-image-wrapper {
   width: 454px;
   height: 432px;
@@ -545,7 +580,6 @@ padding-bottom: 89px;
   object-fit: cover;
 }
 
-/* ADD BUTTON */
 .add-btn {
   position: absolute;
   bottom: 10px;
@@ -565,7 +599,6 @@ padding-bottom: 89px;
   cursor: pointer;
 }
 
-/* CARD TEXT */
 .card-text {
   margin-left: 0px;
   margin-top: 17px;
@@ -590,7 +623,12 @@ padding-bottom: 89px;
   padding-left: 16px; 
 }
 
-/* MAP SECTION */
+
+/* ======================
+   PARTNERING FARMS MAP
+   ====================== */
+
+
 .farms-section {
   width: 1516px;
   margin: 0 auto;
@@ -620,6 +658,7 @@ padding-bottom: 89px;
   width: 1009px;
   border-left: 1px solid black;
   padding: 90px 132px;
+  
 }
 
 .map {
@@ -630,8 +669,11 @@ padding-bottom: 89px;
 }
 
 
+/* ======================
+   FOOTER
+   ====================== */
 
-/* Main footer container */
+
 .site-footer {
   width: 1512px;
   height: 720px;
@@ -641,14 +683,12 @@ padding-bottom: 89px;
   color: #ffffff;
 }
 
-/* Inner wrapper */
 .footer-inner {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-/* FRAM logo header */
 .footer-brand {
   font-family: "Frank Ruhl Libre", serif;
   font-weight: 300;
@@ -658,7 +698,6 @@ padding-bottom: 89px;
   margin: 0;
 }
 
-/* Horizontal divider under FRAM */
 .footer-divider {
   width: calc(100% - 28px);
   margin-left: 28px;
@@ -666,7 +705,6 @@ padding-bottom: 89px;
   margin-top: 17px;
 }
 
-/* STAY UPDATED header */
 .footer-subtitle {
   font-family: "Arimo", sans-serif;
   font-weight: 400;
@@ -676,7 +714,6 @@ padding-bottom: 89px;
   margin-bottom: 0;
 }
 
-/* Newsletter description text */
 .footer-description {
   font-family: "Frank Ruhl Libre", serif;
   font-weight: 300;
@@ -686,7 +723,6 @@ padding-bottom: 89px;
   margin-top: 23px;
 }
 
-/* Newsletter form layout */
 .newsletter-form {
   display: flex;
   flex-direction: column;
@@ -696,7 +732,6 @@ padding-bottom: 89px;
   gap: 32px; 
 }
 
-/* Input fields */
 .input-field {
   width: 460px;
   height: 52px; 
@@ -709,8 +744,7 @@ padding-bottom: 89px;
   color: rgba(0, 0, 0, 0.6);
 }
 
-/* Submit button */
-.send-btn {
+.form-send-btn {
   width: 459px;
   height: 44px;
   margin-top: 24px;
@@ -723,12 +757,82 @@ padding-bottom: 89px;
   font-weight: 400;
 }
 
-/* Send button hover */
-.send-btn:hover {
+.form-send-btn:hover {
   opacity: 0.9;
 }
 
-/* Screen-reader-only label class */
+
+/* ======================
+   MODAL
+   ====================== */
+
+
+.modal {
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  justify-content: center;
+  align-items: center;
+  z-index: 3000; 
+}
+
+.modal-content {
+  background-color: #F7F2DE; 
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 200;
+  color: #222; 
+}
+
+#quantity-input {
+  width: 60px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin: 1rem 0;
+  border: 1px solid #222;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-buttons button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-family: 'Arimo', sans-serif;
+}
+
+#modal-cancel {
+  background-color: #DC4131; 
+  color: #fff;
+}
+
+#modal-confirm {
+  background-color: #28BD6D; 
+  color: #fff;
+}
+
+
+/* ======================
+    SCREEN-READER UTILITY
+   ====================== */
+
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -742,31 +846,389 @@ padding-bottom: 89px;
 }
 
 
-/* alternating background color (optional consistency) */
-.how-step:nth-child(odd),
-.how-step:nth-child(even) {
-  background-color: #F7F2DE;
-}
+/* ======================
+   MEDIA QUERIES (RESPONSIVE)
+   ====================== */
 
-/* --- Responsive layout for smaller screens --- */
+
 @media (max-width: 768px) {
-  .how-step-content {
-    flex-direction: column; /* stack header and paragraph vertically */
-    gap: 0.75rem;           /* tighter spacing on small screens */
+
+ body, html {
+    overflow-x: hidden;
   }
 
-  .how-step h3 {
-    flex: none;             /* remove fixed width */
+  /* --- Navbar--- */
+    .navbar {
+    position: fixed;  
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;     
+    background-color: #F7F2DE;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-}
 
-/* --- Responsive --- */
-@media (max-width: 768px) {
-  .info-section {
+  body {
+    padding-top: 68px; 
+  }
+  .menu-btn {
+    order: 1; 
+    margin: 0;
+    color: black;
+  }
+
+    .logo {
+    order: 2; 
+    margin: 0 auto;
+  }
+
+  .cart-btn {
+    order: 3; 
+    margin: 0;
+  }
+
+
+  
+
+  /* --- Info Section --- */
+   .info-section {
     flex-direction: column;
   }
 
-  .hero-text h1 {
-    font-size: 3rem;
+  .info-section::before {
+    display: none;
+  }
+
+  /* Info card sizes for mobile */
+  .info-card {
+    width: 100%;           
+    height: 725px;         
+    padding: 40px 20px;    
+    box-sizing: border-box;
+    border-bottom: none;   
+  }
+
+  /* Card images */
+  .info-card img {
+    width: 359px;
+    height: 250px;
+    border-radius: 16px;
+    object-fit: cover;
+  }
+
+  .info-card:first-child {
+    border-bottom: 1px solid black;
+    
+  }
+
+  .info-card:nth-child(2) {
+    border-bottom: none;
+  }
+
+
+  /* --- How It Works: stack steps --- */
+   .how-it-works {
+    flex-direction: column;
+  }
+
+   .how-left {
+    text-align: center;
+    padding: 2rem 1rem;
+    border-bottom: 1px solid black; 
+  }
+
+  .how-right {
+    border-left: none; 
+    padding: 0;
+
+  }
+  .how-step-content {
+    display: flex;
+    flex-direction: column;  
+    gap: 0;                  
+    align-items: flex-start; 
+    padding: 0;              
+  }
+
+  .how-step {
+    padding: 16px;           
+  }
+
+  .how-step h3 {
+    margin: 0 0 24px 0;      
+    flex: none;              
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .how-step p {
+    margin: 0 0 24px 0;      
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .how-step a {
+    margin: 0;               
+    font-size: 16px;
+  }
+
+  .how-text {
+    display: block;         
+    width: 100%;
+    padding: 0;
+  }
+
+  /* --- Popular Produce: horizontal scroll --- */
+
+/* Popular Produce Section */
+
+  .popular-produce {
+    width: 100%;
+    padding: 20px 0; 
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch; 
+  }
+
+  .produce-grid {
+    display: flex;
+    flex-wrap: nowrap;      
+    gap: 20px;               
+    padding-left: 16px;     
+    padding-right: 16px;    
+  }
+
+ .produce-item .image-wrapper {
+    width: 359px;
+    height: 250px;
+    position: relative; 
+  }
+
+  .produce-item .add-btn {
+    width: 120px;          
+    height: 36px;
+    bottom: 12px;          
+    right: 12px;           
+    left: auto;            
+    top: auto;            
+    transform: none;       
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .produce-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .produce-page {
+    width: 100%;              
+    padding: 0 16px;          
+    box-sizing: border-box;
+  }
+
+  .produce-title {
+    width: 345px;               
+    margin: 158px auto 8px auto; 
+    text-align: left;           
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .produce-description {
+    width: 345px;               
+    margin: 0 auto 16px auto;   
+    text-align: left;           
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+ /* --- Produce Cards --- */
+.produce-row {
+  flex-direction: column;   
+  max-width: 100%;          
+  margin-left: 0;
+  padding-right: 0;
+  gap: 24px;                
+}
+
+.produce-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      
+}
+
+/* --- Card Images --- */
+.card-image-wrapper {
+  width: 345px;             
+  height: 279px;           
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- Add to Basket button inside card --- */
+.produce-card .add-btn {
+  bottom: 12px;             
+  right: 12px;              
+  width: 120px;             
+  height: 36px;
+  left: auto;
+  top: auto;
+  transform: none;
+  font-size: 14px;
+}
+
+/* --- Card Text Below Image --- */
+.card-text {
+  width: 345px;             
+  margin-top: 12px;
+  text-align: left;         
+  box-sizing: border-box;  
+  padding: 0;              
+}
+
+.card-top-row {
+  display: flex;
+  justify-content: space-between;  
+  width: 100%;                    
+  padding: 0;                      
+  box-sizing: border-box;
+}
+
+.product-weight {
+  margin-top: 8px;
+  text-align: left;
+  padding-left: 0;       
+  font-size: 16px;
+}
+
+  /* --- Partnering Farms Map Section --- */
+
+  .farms-section {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-top: none; 
+  }
+
+  .farms-inner {
+    flex-direction: column; 
+    align-items: center;
+    width: 100%;
+  }
+
+  .farms-title {
+    width: 390px;
+    height: 146px;
+    padding: 0;
+    margin: 48px auto 24px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+
+    font-size: 24px; 
+  }
+
+  .map-wrapper {
+  width: 100%;
+  border-left: none;       
+  padding: 45px 26px;      
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;  
+}
+
+  .map {
+    width: 340px;
+    height: 459px;
+    margin: 0 auto 48px auto;
+  }
+  /* --- Footer --- */
+
+  .site-footer {
+    width: 100%;
+    height: auto; 
+    padding: 40px 16px; 
+    box-sizing: border-box;
+  }
+
+  .footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 24px; 
+    width: 100%;
+  }
+
+  .footer-brand {
+    font-size: 36px; 
+    padding-top: 0;
+    margin-left: 0;
+  }
+
+  .footer-divider {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .footer-subtitle {
+    font-size: 24px;
+    padding-left: 0;
+    text-align: left;
+    margin-top: 24px;
+  }
+
+  .footer-description {
+    font-size: 16px;
+    padding-left: 0;
+    text-align: left;
+    margin-top: 8px;
+    line-height: 1.4;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+    gap: 16px;
+  }
+
+  .input-field {
+    width: 100%;
+    height: 44px;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .form-send-btn {
+    width: 100%;
+    height: 44px;
+    font-size: 14px;
+    color: black;
   }
 }
+
+  /* --- Hero: scale down text --- */
+  .hero-title {
+    font-size: 6rem;
+  }
+  .hero-line {
+    height: 6rem;
+  }
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }

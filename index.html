@@ -5,219 +5,214 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sustainable Food Delivery Webshop</title>
   <link rel="stylesheet" href="styles.css">
- <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700&display=swap" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <link rel="stylesheet" href="chat-widget.css">
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-<header>
- <nav class="navbar">
+<header role="banner">
+  <nav class="navbar" role="navigation" aria-label="Main Navigation">
     <button class="menu-btn" aria-label="Open menu">☰</button>
-    <h1 class="logo">FRAM</h1>
-     <button class="cart-btn" aria-label="Shopping Cart">
-  <span class="cart-count">0</span>
-</button>
+    <h1 class="logo"><a href="index.html">FRAM</a></h1>
+    <button class="cart-btn" aria-label="Shopping Cart">
+      <span class="cart-count">0</span>
+    </button>
     <div class="status-dot" aria-hidden="true"></div>
   </nav>
 </header>
 
-<!-- PopOver Menu -->
-<div class="popover-menu" id="popoverMenu">
+<div class="popover-menu" id="popoverMenu" role="menu" aria-hidden="true">
   <div class="menu-header">
-    <button class="menu-close" aria-label="Close menu">
-      <i class="fas fa-xmark"></i>
-    </button>
+    <button class="menu-close" aria-label="Close menu">✕</button>
   </div>
-
   <nav class="menu-items">
-    <a href="produce.html" class="menu-link">PRODUCTS</a>
-    <a href="#" class="menu-link">CHAT</a>
-    <a href="#" class="menu-link">CHECKOUT</a>
+    <a href="produce.html" class="menu-link" role="menuitem">PRODUCTS</a>
+    <a href="#" class="menu-link chat-link" role="menuitem">CHAT</a>
+    <a href="#" class="menu-link" role="menuitem">CHECKOUT</a>
   </nav>
 </div>
 
-<main>
-    <!-- Hero section -->
-    <section class="hero">
-  <div class="hero-content">
-    <h1 class="hero-title">FRAM</h1>
-    <div class="hero-line"></div>
-    <p class="hero-subtitle">HOME DELIVERY FROM <br> YOUR LOCAL FARMS</p>
-  </div>
-</section>
-
-    <!-- Two info cards -->
-    <section class="info-section">
-      <div class="info-card">
-        <h2>SHOP OUR SEASONAL SELECTION</h2>
-        <p>Updated every week</p>
-        <img src="images/veggies.png" alt="Fresh vegetables">
-        <p>New produce is added continuously as time goes by and the seasons change.</p>
-        <a href="produce.html" class="info-btn">Browse our selection</a>
-      </div>
-
-      <div class="info-card">
-        <h2>ASK US ABOUT <br> ANYTHING</h2>
-        <p>All your questions answered</p>
-        <img src="images/farmer.png" alt="Farmer working in field">
-        <p>New produce is added continuously as time goes by and the seasons change.</p>
-         <a href="#" class="info-btn">Go to chat</a>
-      </div>
-    </section>
-
-<!-- How it Works section -->
-<section class="how-it-works">
-  <div class="how-left">
-    <h2>THIS IS HOW IT <br> WORKS</h2>
-  </div>
-
-  <div class="how-right">
-   <div class="how-step">
-  <div class="how-step-content">
-    <h3>ORDER GROCERIES</h3>
-    <div class="how-text">
-      <p>Fram is a circular service that ensures your kitchen is <br> always stocked with the essentials you need. Browse our <br> seasonal selection, choose your <br> items, and place your order online.</p>
-      <a href="produce.html">See our stock here</a>
+<main role="main">
+  <!-- Hero Section -->
+  <section class="hero" aria-label="Hero Section">
+    <div class="hero-content">
+      <h1 class="hero-title">FRAM</h1>
+      <div class="hero-line" aria-hidden="true"></div>
+      <p class="hero-subtitle">HOME DELIVERY FROM <br> YOUR LOCAL FARMS</p>
     </div>
-  </div>
-</div>
+  </section>
 
-    <div class="how-step">
-      <div class="how-step-content">
-        <h3>STOCK UP</h3>
-        <p>Once your order arrives, unpack the produce and store it <br> however it works best for you. Hold onto the containers— <br> they’re yours to keep until your next order.</p>
-      </div>
+  <!-- Info Section -->
+  <section class="info-section" aria-label="Information Section">
+    <article class="info-card">
+      <h2>SHOP OUR SEASONAL SELECTION</h2>
+      <p>Updated every week</p>
+      <img src="images/veggies.png" alt="Fresh vegetables">
+      <p>New produce is added continuously as time goes by and the seasons change.</p>
+      <a href="produce.html" class="info-btn">Browse our selection</a>
+    </article>
+    <article class="info-card">
+      <h2>ASK US ABOUT ANYTHING</h2>
+      <p>All your questions answered</p>
+      <img src="images/farmer.png" alt="Farmer working in field">
+      <p>New produce is added continuously as time goes by and the seasons change.</p>
+      <a href="#" class="info-btn chat-link">Go to chat</a>
+    </article>
+  </section>
+
+  <!-- How it Works -->
+  <section class="how-it-works" aria-labelledby="how-title">
+    <div class="how-left">
+      <h2 id="how-title">THIS IS HOW IT WORKS</h2>
     </div>
-
-    <div class="how-step">
-      <div class="how-step-content">
-        <h3>SCAN & REORDER</h3>
-        <p>Ready for a refill? Grab the containers from your last order <br> and scan the QR code with our app or your phone’s <br> camera. This instantly adds the items back to your cart, <br> making reordering a breeze.</p>
+    <div class="how-right">
+      <div class="how-step">
+        <div class="how-step-content">
+          <h3>ORDER GROCERIES</h3>
+          <div class="how-text">
+            <p>Fram is a circular service that ensures your kitchen is <br> always stocked with the essentials you need. Browse our <br> seasonal selection, choose your items, and place your <br> order online.</p>
+            <a href="produce.html">See our stock here</a>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="how-step">
-      <div class="how-step-content">
-        <h3>SWAP & REUSE</h3>
-        <p>When we deliver your new order, simply leave your empty <br> containers outside. We’ll pick them up, clean them <br> thoroughly, and reuse them for future deliveries.</p>
+      <div class="how-step">
+        <div class="how-step-content">
+          <h3>STOCK UP</h3>
+          <p>Once your order arrives, unpack the produce and store it <br> however it works best for you. Hold onto the containers— <br> they’re yours to keep until your next order.</p>
+        </div>
+      </div>
+      <div class="how-step">
+        <div class="how-step-content">
+          <h3>SCAN & REORDER</h3>
+          <p>Ready for a refill? Grab the containers from your last order <br> and scan the QR code with our app or your phone’s <br> camera. This instantly adds the items back to your cart, <br> making reordering a breeze.</p>
+        </div>
+      </div>
+      <div class="how-step">
+        <div class="how-step-content">
+          <h3>SWAP & REUSE</h3>
+          <p>When we deliver your new order, simply leave your empty <br> containers outside. We’ll pick them up, clean them <br> thoroughly, and reuse them for future deliveries.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Popular Produce Section-->
+  <!-- Popular Produce -->
   <section class="popular-produce" aria-labelledby="popular-title">
-<h2 id="popular-title">POPULAR PRODUCE</h2>
+    <h2 id="popular-title">POPULAR PRODUCE</h2>
+    <div class="produce-grid">
+      <article class="produce-item">
+        <div class="image-wrapper">
+          <img src="images/oats.png" alt="Photo of oats">
+          <button class="add-btn" aria-label="Add Oats to basket">Add to basket <span aria-hidden="true" class="arrow">↑</span></button>
+        </div>
+        <div class="text-block">
+          <div class="top-row">
+            <span class="name">Oats</span>
+            <span class="price">48 kr / kg</span>
+          </div>
+          <p class="weight">1 kg</p>
+        </div>
+      </article>
 
+      <article class="produce-item">
+        <div class="image-wrapper">
+          <img src="images/redonion.png" alt="Photo of red onions">
+          <button class="add-btn" aria-label="Add Red Onions to basket">Add to basket <span aria-hidden="true" class="arrow">↑</span></button>
+        </div>
+        <div class="text-block">
+          <div class="top-row">
+            <span class="name">Red Onions</span>
+            <span class="price">48 kr / kg</span>
+          </div>
+          <p class="weight">0.5 kg</p>
+        </div>
+      </article>
 
-<div class="produce-grid">
-<article class="produce-item">
-<div class="image-wrapper">
-<img src="images/oats.png" alt="Photo of oats" />
-<button class="add-btn" aria-label="Add Oats to basket">Add to basket <span class="arrow" aria-hidden="true">↑</span></button>
-</div>
-<div class="text-block">
-<div class="top-row">
-<span class="name">Oats</span>
-<span class="price">48 kr / kg</span>
-</div>
-<p class="weight">1 kg</p>
-</div>
-</article>
+      <article class="produce-item">
+        <div class="image-wrapper">
+          <img src="images/garlic.png" alt="Photo of garlic">
+          <button class="add-btn" aria-label="Add Garlic to basket">Add to basket <span aria-hidden="true" class="arrow">↑</span></button>
+        </div>
+        <div class="text-block">
+          <div class="top-row">
+            <span class="name">Garlic</span>
+            <span class="price">48 kr / kg</span>
+          </div>
+          <p class="weight">0.2 kg</p>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
 
-
-<article class="produce-item">
-<div class="image-wrapper">
-<img src="images/redonion.png" alt="Photo of red onions" />
-<button class="add-btn" aria-label="Add Red Onions to basket">Add to basket <span class="arrow" aria-hidden="true">↑</span></button>
-</div>
-<div class="text-block">
-<div class="top-row">
-<span class="name">Red Onions</span>
-<span class="price">48 kr / kg</span>
-</div>
-<p class="weight">0.5 kg</p>
-</div>
-</article>
-
-
-<article class="produce-item">
-<div class="image-wrapper">
-<img src="images/garlic.png" alt="Photo of garlic" />
-<button class="add-btn" aria-label="Add Garlic to basket">Add to basket <span class="arrow" aria-hidden="true">↑</span></button>
-</div>
-<div class="text-block">
-<div class="top-row">
-<span class="name">Garlic</span>
-<span class="price">48 kr / kg</span>
-</div>
-<p class="weight">0.2 kg</p>
-</div>
-</article>
-</div>
-</section>
-
-  </main>
 <footer class="site-footer" role="contentinfo" aria-labelledby="footer-heading">
-  <div class="footer-inner">
+  <h2 id="footer-heading" class="footer-brand">FRAM</h2>
+  <div class="footer-divider"></div>
+  <h3 class="footer-subtitle">STAY UPDATED</h3>
+  <p class="footer-description">
+    Sign up for our newsletter to be the first to know about new produce or other exciting news!
+  </p>
 
-    <!-- Visible Footer Brand -->
-    <h2 id="footer-heading" class="footer-brand">FRAM</h2>
+  <form class="newsletter-form" aria-labelledby="newsletter-heading">
+    <h4 id="newsletter-heading" class="sr-only">Newsletter Signup Form</h4>
 
-    <div class="footer-divider"></div>
+    <label for="first-name" class="sr-only">First name</label>
+    <input 
+      type="text" 
+      id="first-name" 
+      name="first_name" 
+      placeholder="First name" 
+      class="input-field" 
+      aria-required="true"
+    >
 
-    <!-- Stay Updated Section -->
-    <h3 class="footer-subtitle">STAY UPDATED</h3>
+    <label for="email" class="sr-only">Email address</label>
+    <input 
+      type="email" 
+      id="email" 
+      name="email" 
+      placeholder="E-mail address" 
+      class="input-field" 
+      aria-required="true"
+    >
 
-    <p class="footer-description">
-      Sign up for our newsletter to be the first <br>
-      to know about new produce or other <br>
-      exciting news!
-    </p>
+    <!-- Container for confirmation message -->
+    <div 
+      id="newsletter-message" 
+      aria-live="polite" 
+      style="margin-top: 12px; color: #1B1A1E; font-family: 'Arimo', sans-serif;">
+    </div>
 
-    <!-- Accessible Newsletter Form -->
-    <form class="newsletter-form" aria-labelledby="newsletter-heading">
-      
-      <!-- Hidden but accessible label -->
-      <h4 id="newsletter-heading" class="sr-only">Newsletter Signup Form</h4>
-
-      <label for="first-name" class="sr-only">First name</label>
-      <input 
-        type="text"
-        id="first-name"
-        name="first_name"
-        placeholder="First name"
-        autocomplete="given-name"
-        class="input-field"
-        aria-required="true"
-      >
-
-      <label for="email" class="sr-only">Email address</label>
-      <input 
-        type="email"
-        id="email"
-        name="email"
-        placeholder="E-mail adress"
-        autocomplete="email"
-        class="input-field"
-        aria-required="true"
-      >
-
-      <button
-        type="submit"
-        class="send-btn"
-        aria-label="Send newsletter signup form"
-      >
-        Send
-      </button>
-
-    </form>
-
-  </div>
+    <button 
+      type="submit" 
+      class="form-send-btn" 
+      aria-label="Send newsletter signup form"
+    >
+      Send
+    </button>
+  </form>
 </footer>
 
+
+<!-- Chat Widget -->
+<div id="chat-container" role="dialog" aria-modal="true" aria-labelledby="chat-title"></div>
+
+<!-- Quantity Modal -->
+<div id="quantity-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="quantity-modal-title">
+  <div class="modal-content">
+    <p id="quantity-modal-title">How many units would you like to add?</p>
+    <input type="number" id="quantity-input" min="1" value="1">
+    <div class="modal-buttons">
+      <button id="modal-cancel">Cancel</button>
+      <button id="modal-confirm">Add to basket</button>
+    </div>
+  </div>
+</div>
+
 <script src="script.js"></script>
+<script src="chat.js"></script>
+<script src="cart.js" defer></script>
 </body>
 </html>
