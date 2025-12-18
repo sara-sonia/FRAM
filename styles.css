@@ -4,11 +4,15 @@
    GLOBAL STYLES
    ====================== */
 
+   
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+
 
 
 
@@ -31,44 +35,49 @@ header {
 }
 
 
+/* ======================
+   NAVBAR
+   ====================== */
 .navbar {
   display: flex;
-  align-items: center; 
+  align-items: center;
+  justify-content: space-between; 
   padding: 1rem 2rem;
   background-color: #F7F2DE;
   position: sticky;
   top: 0;
   border-bottom: 1px solid #000;
+  position: relative; 
 }
 
-
+/* Menu button on the left */
 .menu-btn {
   background: none;
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-  margin-right: 662px; 
+  z-index: 2; 
 }
 
-.menu-btn:hover {
-  opacity: 0.4;
-}
-
-
+/* Logo centered horizontally */
 .logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   font-family: 'Frank Ruhl Libre', serif;
   font-weight: 300;
   font-size: 32px;
   letter-spacing: 2px;
-  margin-right: 636px; 
+  z-index: 1; 
 }
 
 .logo a {
-  text-decoration: none; 
-  color: inherit;        
-  display: inline-block; 
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
 }
 
+/* Cart button aligned to the right */
 .cart-btn {
   display: flex;
   align-items: center;
@@ -82,6 +91,8 @@ header {
   background-color: #28BD6D;
   border: none;
   cursor: pointer;
+  margin-left: auto; /* keeps it all the way right */
+  z-index: 2; /* ensures it's above logo if overlapping */
 }
 
 .cart-btn .cart-count {
@@ -104,7 +115,8 @@ header {
   left: 0;
   width: 100%;
   max-width: 475px;
-  height: auto;          
+  height: 100vh; 
+  overflow-y: auto;           
   background-color: #008F51;
   display: none;
   flex-direction: column;
@@ -242,19 +254,21 @@ header {
 }
 
 
-.info-card {
-  width: 756px;              
-  min-height: 841px;         
-  display: flex;
-  flex-direction: column;    
-  align-items: center;       
-  box-sizing: border-box;
-  padding-top: 90px;         
-  padding-left: 150px;       
-  padding-right: 150px;
-  padding-bottom: 90px;      
-  position: relative;        
-  background-color: #FFFFFF;
+.info-card { 
+width: 756px; 
+max-width: 100%; 
+margin: 0 auto; 
+min-height: 841px; 
+display: flex; 
+flex-direction: column; 
+align-items: center; 
+box-sizing: border-box; 
+padding-top: 90px; 
+padding-left: clamp(20px, 5vw, 150px); 
+padding-right: clamp(20px, 5vw, 150px); 
+padding-bottom: 90px; 
+position: relative; 
+background-color: #FFFFFF; 
 }
 
 .info-card h2 {
@@ -297,6 +311,7 @@ header {
   text-decoration: none; 
   cursor: pointer;
   margin-bottom: 90px;
+  margin-top: auto; 
 }
 
 .info-btn:hover {
@@ -410,7 +425,8 @@ header {
 
 
 .popular-produce {
-  width: 1512px;
+  width: 100%;
+  max-width: 1512px;
   margin: 0 auto;
   box-sizing: border-box;        
   padding: 90px 45px 0 45px;     
@@ -445,8 +461,9 @@ flex-direction: column;
 
 .image-wrapper {
 position: relative;
-width: 454px;
-height: 432px;
+width: 100%;
+max-width: 454px;
+height: auto;
 border-radius: 16px;
 overflow: hidden;
 }
@@ -454,7 +471,7 @@ overflow: hidden;
 
 .image-wrapper img {
 width: 100%;
-height: 100%;
+height: auto;
 object-fit: cover;
 }
 
@@ -518,7 +535,8 @@ padding-bottom: 89px;
 
 
 .produce-page {
-  width: 1516px;
+  width: 100%;
+  max-width: 1512px;
   margin: 0 auto;
   background-color: #F7F2DE;
 }
@@ -550,15 +568,21 @@ padding-bottom: 89px;
   justify-content: flex-start;  
   padding-right: 0;      
   max-width: calc(454px * 3 + 29px * 2); 
+  flex-wrap: nowrap;
 }
 
 .row-top {
   margin-top: 52px;
+  max-width: calc(454px * 3 + 29px * 2);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .row-bottom {
   margin-top: 57px;
-  padding-right: 531px;
+  max-width: calc(454px * 2 + 29px);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .produce-card {
@@ -567,11 +591,12 @@ padding-bottom: 89px;
 }
 
 .card-image-wrapper {
-  width: 454px;
-  height: 432px;
+  width: 100%;
+  max-width: 454px;
+  aspect-ratio: 454 / 432;
   border-radius: 16px;
-  position: relative;
   overflow: hidden;
+  position: relative;
 }
 
 .card-image-wrapper img {
@@ -630,7 +655,8 @@ padding-bottom: 89px;
 
 
 .farms-section {
-  width: 1516px;
+  width: 100%;
+  max-width: 1512px;
   margin: 0 auto;
   border-top: 1px solid black;
   margin-top: 120px;
@@ -675,10 +701,11 @@ padding-bottom: 89px;
 
 
 .site-footer {
-  width: 1512px;
+  width: 100%;
+  max-width: 1512px;
+  margin: 0 auto;
   height: 720px;
   background-color: #DC4131;
-  margin: 0 auto;
   position: relative;
   color: #ffffff;
 }
@@ -857,37 +884,47 @@ padding-bottom: 89px;
     overflow-x: hidden;
   }
 
+  
+
   /* --- Navbar--- */
-    .navbar {
-    position: fixed;  
+ .navbar {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    padding: 1rem;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 9999;     
+    z-index: 9999;
     background-color: #F7F2DE;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 
   body {
-    padding-top: 68px; 
+    padding-top: 68px;
   }
+
+  /* Menu button stays left */
   .menu-btn {
-    order: 1; 
-    margin: 0;
+    position: relative;
+    z-index: 2;
+    margin-right: auto;
     color: black;
   }
 
-    .logo {
-    order: 2; 
-    margin: 0 auto;
+  /* Logo absolutely centered */
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    margin: 0;
   }
 
+  /* Cart button stays right */
   .cart-btn {
-    order: 3; 
-    margin: 0;
+    margin-left: auto;
+    z-index: 2;
   }
 
 
@@ -1022,6 +1059,8 @@ padding-bottom: 89px;
     display: none;
   }
 
+  /* --- Produce Page --- */
+
   .produce-page {
     width: 100%;              
     padding: 0 16px;          
@@ -1052,8 +1091,14 @@ padding-bottom: 89px;
   max-width: 100%;          
   margin-left: 0;
   padding-right: 0;
-  gap: 24px;                
+  gap: 24px; 
+  flex-wrap: wrap;               
 }
+
+.row-top,
+  .row-bottom {
+    max-width: 100%;
+  }
 
 .produce-card {
   display: flex;
