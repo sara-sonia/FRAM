@@ -32,99 +32,103 @@ The chatbot is designed to assist users with general website-related questions a
 
 ## Setup and Installation Instructions
 
-## Prerequisites
+### Prerequisites
 
 Before running the project, make sure you have:
-- Node.js installed  
-  https://nodejs.org
+- Node.js installed: [https://nodejs.org](https://nodejs.org)
 - Git installed (optional, but recommended)
 
 ---
 
-## Installation Steps
+### Installation Steps
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/sara-sonia/FRAM/blob/master/README.md
+   git clone https://github.com/sara-sonia/FRAM.git
+   ```
 
 2. Navigate into the project directory:
    ```bash
-    cd EXAM_PROJECT
+   cd FRAM
+   ```
 
 3. Install dependencies:
-    ```bash
-    npm install
+   ```bash
+   npm install
+   ```
 
-## Environment Variables 
+### Environment Variables
 
 This project requires an API key for the OpenAI chatbot functionality.
 
-1. Create a .env file in the root of your project directory.
+1. Create a `.env` file in the root of your project directory.
 
-2. Add the following environment variables:
-OPENAI_API_KEY=your_openai_api_key_here
+2. Add the following environment variable:
+   ```env
+   OPENAI_API_KEY=your_openai_api_key_here
+   ```
 
+**Note:** The `.env` file is not included in the repository for security reasons. Ensure your keys are kept private.
 
-Note: The .env file is not included in the repository for security reasons. Ensure your keys are kept private.
-
+---
 
 ## Running the Application Locally
 
 1. Start the Node.js server:
-  ```bash 
-   node server.js
+   ```bash
+   npm start
+   ```
+   > Make sure your `package.json` has a start script like `"start": "node server.js"`.
 
 2. Open your web browser and navigate to:
+   ```
    http://localhost:3000
+   ```
 
 3. You should now see the website fully functional, including:
-   Responsive layout
-   Shopping cart with quantity selection
-   AI chatbot
-   Google Maps integration
+   - Responsive layout
+   - Shopping cart with quantity selection
+   - AI chatbot
+   - Google Maps integration
+
+---
 
 ## Accessibility Considerations
 
-Accessibility has been implemented throughout the project, including:
 - ARIA roles and labels for interactive elements
-
 - Keyboard navigation for modals and chatbot
-
 - Focus management to ensure a smooth user experience
-
 - Semantic HTML structure to enhance screen reader compatibility
+
+---
 
 ## Ethical Considerations
 
-- The AI chatbot has been designed with responsible use in mind: Privacy: No personal data is stored.
-
+- Privacy: No personal data is stored by the chatbot.
 - Transparency: Users are informed that the chatbot is AI-powered.
-
 - Bias Mitigation: Limited to general website assistance; relies on OpenAI safety mechanisms.
-
 - Responsible Usage: The chatbot is not used for sensitive or personal data collection.
+
+---
 
 ## Known Limitations
 
 - The chatbot requires a valid OpenAI API key and active billing.
-
 - The chatbot is limited to simple queries and does not retain conversational context across sessions.
-
 - The shopping cart data is stored locally and does not persist between devices.
-
 - This project is intended for educational purposes and not production use.
+
+---
 
 ## Future Improvements
 
 - Expand the chatbot’s capabilities, including product recommendations and more complex queries.
-
 - Implement persistent backend storage for the shopping cart.
-
 - Enhance error handling and visual feedback for the chatbot and cart interactions.
-
 - Conduct further accessibility testing with screen readers and other assistive technologies.
-
 - Refine the responsive design for a wider range of devices.
 
+---
+
 ## Author
-     **Sara M.** – Student, PRO1001 Web Development Exam Project
+**Sara M.** – Student, PRO1001 Web Development Exam Project
